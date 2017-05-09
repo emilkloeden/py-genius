@@ -10,6 +10,9 @@ tests/__pycache__/
 # C extensions
 *.so
 
+# My own
+genius-play.py
+
 # Distribution / packaging
 .Python
 env/
