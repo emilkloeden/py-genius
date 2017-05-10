@@ -1,6 +1,6 @@
 import pytest
 import json
-from genius import Genius
+from py_genius import Genius
 
 def raise_TypeError():
     """Helper function to test TypeError is raised when expected"""
