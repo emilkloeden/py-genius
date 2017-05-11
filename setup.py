@@ -2,12 +2,12 @@ from setuptools import setup
 
 setup(
     name='py_genius',
-    version='0.3.0',
+    version='0.4.0',
     description='A thin wrapper around the Genius API',
     author='Emil Kloeden',
     author_email='emilkloeden@gmail.com',
     url='https://github.com/emilkloeden/py-genius',
-    download_url='https://github.com/emilkloeden/py-genius/0.3.0.tar.gz',
+    download_url='https://github.com/emilkloeden/py-genius/0.4.0.tar.gz',
     keywords=['genius'],
     classifiers=[],
     tests_require=['pytest'],
