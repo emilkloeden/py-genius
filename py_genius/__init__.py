@@ -1,1 +1,1 @@
-from py_genius import Genius
+from py_genius.py_genius import Genius
