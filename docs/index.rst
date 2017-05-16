@@ -6,17 +6,45 @@
 Welcome to py_genius's documentation!
 =====================================
 
-Contents:
+#########
+py_genius
+#########
 
-.. toctree::
-   :maxdepth: 2
+Installation
+------------
+::
+
+   pip install py_genius
+
+Get started
+-----------
+
+#. pip install py_genius
+#. Create an account on genius.com
+#. Register an application at https://genius.com/api-clients and Generate an Access Token
 
 
+Usage
+-----
+.. code-block:: python
+   
+   import os
+   from py_genius import Genius
 
-Indices and tables
-==================
+   g = Genius(os.environ['GENIUS_API_ACCESS_TOKEN'])
+   search_results = g.search('Sia')
+   sia_id = search_results['response']['hits'][0]['result']['primary_artist']['id']
+   
+   sia = g.get_artist(sia_id)
+   
+   sia_songs = g.get_artist_songs(sia_id)
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   chandelier_id = [
+       song['response']['song']['id']
+       for song 
+       in sia_songs 
+       if song['response']['song']['full_title'] == 'Chandelier by Sia'
+   ][0]
+
+   chandelier = g.get_song(chandelier_id)
 
